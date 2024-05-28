@@ -7,13 +7,13 @@ const router = express.Router();
 /* ************************************************************************* */
 
 // Import item-related actions
-const { browse } = require("../../../controllers/programActions");
+const { browse, read } = require("../../../controllers/programActions");
 
 // Route to get a list of items
 router.get("/", browse);
 
-// Route to get a specific item by ID
-// router.get("/:id", read);
+// ...
+router.get("/:id", read); // Complete path is: /api/programs/:id
 
 // Route to add a new item
 // router.post("/", add);
